@@ -21,7 +21,7 @@ describe('AddTodo', () => {
         TestUtils.Simulate.submit($el.find('form')[0]);
 
         expect(spy).toHaveBeenCalledWith(todoText);
-    })
+    });
 
     it('should not call onAddTodo prop when invalid input', () => {
         var todoText = "";
@@ -33,5 +33,5 @@ describe('AddTodo', () => {
         TestUtils.Simulate.submit($el.find('form')[0]);
 
         expect(spy).toNotHaveBeenCalled(todoText);
-    })
+    });
 });
