@@ -28,8 +28,25 @@ module.exports = {
         });
 
         //Filter by searchText
+        filteredTodos = filteredTodos.filter((todo) => {
+            if(searchText && searchText.length > 0) {
+                var result = todo.text.toLowerCase().indexOf(searchText);
+                return result > -1;
+            } else {
+                return true;
+            }
+        });
 
         //Sort todos with non-completed first
+        filteredTodos.sort( (a,b) => {
+            if (!a.completed && b.completed) {
+                return -1;
+            } else if (a.completed && !b.completed) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
 
         return filteredTodos;
     }
