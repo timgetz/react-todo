@@ -29,12 +29,8 @@ module.exports = {
 
         //Filter by searchText
         filteredTodos = filteredTodos.filter((todo) => {
-            if(searchText && searchText.length > 0) {
-                var result = todo.text.toLowerCase().indexOf(searchText);
-                return result > -1;
-            } else {
-                return true;
-            }
+            var text = todo.text.toLowerCase();
+            return searchText.length.length === 0 || text.indexOf(searchText) > -1;
         });
 
         //Sort todos with non-completed first
