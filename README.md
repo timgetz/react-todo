@@ -5,6 +5,9 @@ api.openweathermap.org/data/2.5/weather?q=London,uk&units=imperial&appid=e7f3ac5
 
 webpack --watch --progress
 
+set NODE_ENV=production
+webpack -p
+
 node server.js
 
 

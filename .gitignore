@@ -39,3 +39,6 @@ dist
 # Mac files
 .DS_Store
 
+# Remove built file(s)
+public/bundle.js
+
