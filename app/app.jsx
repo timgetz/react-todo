@@ -7,7 +7,6 @@ var TodoApp = require('TodoApp');
 
 var actions = require('actions');
 var store = require('configureStore').configure();
-var TodoAPI = require('TodoAPI');
 
 store.dispatch(actions.startAddTodos());
 
