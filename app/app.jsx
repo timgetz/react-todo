@@ -30,10 +30,9 @@ $(document).foundation();
 require('style!css!sass!applicationStyles');
 
 
-
 ReactDOM.render(
-  <Provider store={store}>
-      {router}
-  </Provider>,
-  document.getElementById('app')
+    <Provider store={store}>
+        {router}
+    </Provider>,
+    document.getElementById('app')
 );
